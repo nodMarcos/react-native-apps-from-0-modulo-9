@@ -1,11 +1,19 @@
 import React from 'react';
-import { View } from 'react-native';
-import firebase from './src/services/firebaseConnection';
+import 'react-native-gesture-handler';
+import { LogBox, StatusBar, Text, View, } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import Routes from './src/routes';
+import AuthProvider from './src/contexts/auth';
+
+LogBox.ignoreAllLogs(true)
 
 export default function App() {
  return (
-    <View>
-      <Text>Hello World</Text>
-    </View>
+    <NavigationContainer>
+      <AuthProvider>
+        <StatusBar backgroundColor="#131313" barStyle="light-content" />
+        <Routes />
+      </AuthProvider>
+    </NavigationContainer>
   );
 }
