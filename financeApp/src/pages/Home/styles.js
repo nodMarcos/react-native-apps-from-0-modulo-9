@@ -1,5 +1,11 @@
 import styled from 'styled-components/native';
 
+export const Area = styled.View`
+  flex-direction: row;
+  margin-left: 15px;
+  align-items: baseline; 
+`
+
 export const Background = styled.View`
   flex: 1;
   background-color: #131313;
@@ -24,7 +30,7 @@ export const Balance = styled.Text`
 `;
 
 export const Title = styled.Text`
-  margin-left: 15px;
+  margin-left: 5px;
   color: #00b94a;
   margin-bottom: 10px;
 `;
